@@ -12,6 +12,9 @@
 !gradlew
 !gradlew.bat
 !settings.gradle
+!.mvn
+!mvnw
+!mvnw.cmd
 !pom.xml
 !README.md
 !/*.gitignore
