@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'groovy'
+}
+
+group 'net.sudot'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    maven { url 'https://maven.aliyun.com/repository/public/' }
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+
+    // Spock依赖
+    testCompile 'org.spockframework:spock-core:1.3-groovy-2.5'
+}
+
+sourceSets {
+    main {
+        groovy {
+            srcDirs = ['src/main/groovy']
+        }
+        java {
+            srcDirs = ['src/main/java']
+        }
+    }
+    test {
+        groovy {
+            srcDirs = ['src/test/groovy']
+        }
+        java {
+            srcDirs = ['src/test/java']
+        }
+    }
+}
